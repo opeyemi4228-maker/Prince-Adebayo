@@ -63,8 +63,14 @@ export default function Footer() {
 
         <div className="flex flex-col gap-3 py-8 text-sm text-white/40 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} {site.name}. Authorised by the {site.party} Presidential Campaign.</p>
-          <p>
-            Built for a Nigeria that works. <Link href="/credits" className="underline decoration-white/20 underline-offset-4 hover:text-orange">Photo credits</Link>
+          <p className="flex flex-wrap items-center gap-x-4 gap-y-1">
+            <Link href="/credits" className="underline decoration-white/20 underline-offset-4 hover:text-orange">Photo credits</Link>
+            <span>
+              Built by{" "}
+              <a href="https://www.bitlayerx.com" target="_blank" rel="noopener" className="font-medium text-white/70 transition-colors hover:text-orange">
+                BitLayerX Technologies
+              </a>
+            </span>
           </p>
         </div>
       </div>
