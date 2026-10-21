@@ -2,7 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
@@ -107,12 +106,11 @@ export default function Header() {
             )}
             onMouseLeave={closeMega}
           >
-            <Link href="/" className="flex items-center gap-3" aria-label="Home">
-              <span className="relative block h-11 w-12 overflow-hidden rounded-xl border border-line">
-                <Image src="/brand/sdp-logo.png" alt="SDP logo" fill sizes="48px" className="object-cover" priority />
-              </span>
+            <Link href="/" className="flex items-center gap-3 pl-2" aria-label={`${site.name}, home`}>
               <span className="leading-none">
-                <span className="block text-[15px] font-extrabold tracking-tight">{site.shortName}</span>
+                <span className="block text-[15px] font-extrabold tracking-tight sm:text-[17px]">
+                  Prince Adewole <span className="text-orange">Adebayo</span>
+                </span>
                 <span className="mt-1 flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-muted">
                   <span className="h-1.5 w-1.5 rounded-full bg-orange" />
                   <span className="sm:hidden">SDP · Presidential</span>

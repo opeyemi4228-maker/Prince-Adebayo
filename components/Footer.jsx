@@ -1,5 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
 import { nav, pillars, site } from "@/lib/content";
 
 export default function Footer() {
@@ -8,14 +7,11 @@ export default function Footer() {
       <div className="container-x">
         <div className="grid gap-14 border-b border-white/10 pb-16 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr_1fr]">
           <div className="max-w-sm">
-            <div className="flex items-center gap-4">
-              <span className="relative block h-16 w-[72px] overflow-hidden rounded-lg bg-white">
-                <Image src="/brand/sdp-logo.png" alt="SDP logo" fill sizes="72px" className="object-cover" />
-              </span>
-              <div>
-                <p className="text-lg font-semibold tracking-tight">{site.name}</p>
-                <p className="text-sm text-white/50">{site.role}</p>
-              </div>
+            <div>
+              <p className="text-2xl font-extrabold tracking-tight">
+                Prince Adewole <span className="text-orange">Adebayo</span>
+              </p>
+              <p className="mt-1 text-sm text-white/50">{site.role}</p>
             </div>
             <p className="mt-8 leading-relaxed text-white/60">
               A lawyer, builder and reformer with a plan to make Nigeria work for every citizen, in every state.
